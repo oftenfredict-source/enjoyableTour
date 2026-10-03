@@ -509,276 +509,6 @@
                      <a href="{{ url('/about') }}" class="tp-btn tp-btn-xxl tp-btn-white wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".6s">Get to Know Us</a>
                   </div>
                </div>
-               <div class="col-xl-5 col-lg-6">
-                  <div class="tp-booking-form-one mb-30 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                     <p class="tp-booking-form-one-subtitle mb-10">Used by millions globally Turie</p>
-                     <h2 class="tp-booking-form-one-title mb-25">Find The Best Places Near at you!</h2>
-                     <div class="tp-booking-form">
-                        <form action="#">
-                           <div class="tp-booking-wrap p-relative">
-                              <div class="tp-booking-location mb-15 p-relative">
-                                 <div class="tp-booking-location-input tp-booking-toggle p-relative">
-                                    <span class="tp-booking-input-icon">
-                                       <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M12.5 6.63636C12.5 11.4091 6.5 15.5 6.5 15.5C6.5 15.5 0.5 11.4091 0.5 6.63636C0.5 5.0089 1.13214 3.44809 2.25736 2.2973C3.38258 1.14651 4.9087 0.5 6.5 0.5C8.0913 0.5 9.61742 1.14651 10.7426 2.2973C11.8679 3.44809 12.5 5.0089 12.5 6.63636Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M6.5 8.68125C7.60457 8.68125 8.5 7.76562 8.5 6.63613C8.5 5.50664 7.60457 4.591 6.5 4.591C5.39543 4.591 4.5 5.50664 4.5 6.63613C4.5 7.76562 5.39543 8.68125 6.5 8.68125Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                       </svg>
-                                    </span>
-                                    <input class="tp-input" type="text" placeholder="Where to ?">
-                                 </div>
-                                 <div class="tp-booking-location-list tp-booking-toggle-active">
-                                    <div class="tp-booking-location-inner">
-                                       <span class="tp-booking-location-suggested">Suggested destinations</span>
-                                       <ul>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/01.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>Nearby</span>
-                                                <p>Find what’s around you</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/02.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>Toronto, Canada</span>
-                                                <p>For sights like CN Tower</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/03.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>Bangkok, Thailand</span>
-                                                <p>For its bustling nightlife</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/04.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>London, United Kingdom</span>
-                                                <p>For its stunning architecture</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/05.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>Vancouver, Canada</span>
-                                                <p>For sights like Stanley Park</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/06.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>Kolkata, India</span>
-                                                <p>For its top-notch dining</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/07.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>Mississauga, Canada</span>
-                                                <p>For a tour abroad</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/08.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>Downtown Montreal, Canada</span>
-                                                <p>For sights like Notre-Dame</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/09.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>New Delhi, India</span>
-                                                <p>For its stunning architecture</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/10.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>Istanbul, Türkiye</span>
-                                                <p>For its bustling nightlife</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/11.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>Paris, France</span>
-                                                <p>For sights like Eiffel Tower</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/12.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>Burnaby, Canada</span>
-                                                <p>For nature-lovers</p>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <div class="tp-booking-location-icon">
-                                                <img src="{{ asset('turiehtml-10/turie/assets/img/booking-form/13.png') }}" alt="booking">
-                                             </div>
-                                             <div class="tp-booking-location-content">
-                                                <span>Rome, Italy</span>
-                                                <p>For a tour abroad</p>
-                                             </div>
-                                          </li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="tp-booking-location mb-15 tp-booking-datepicker p-relative">
-                                 <div class="tp-booking-location-input tp-booking-toggle p-relative">
-                                    <span class="tp-booking-input-icon">
-                                       <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M11.1667 1.8H1.83333C1.09695 1.8 0.5 2.38203 0.5 3.1V12.2C0.5 12.918 1.09695 13.5 1.83333 13.5H11.1667C11.903 13.5 12.5 12.918 12.5 12.2V3.1C12.5 2.38203 11.903 1.8 11.1667 1.8Z" stroke="#5C5F66" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M9.1665 0.5V3.1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M3.8335 0.5V3.1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M0.5 5.70001H12.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                       </svg>
-                                    </span>
-                                    <input class="tp-multi-datepicker tp-input" id="date" type="text" name="date" placeholder="Select dates">
-                                    <span class="tp-booking-input-angle-icon">
-                                       <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M11.5 0.500045C11.5 0.500045 7.44934 6 6 6C4.55057 6 0.5 0.5 0.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                       </svg>
-                                    </span>
-                                 </div>
-                              </div>
-                              <div class="tp-booking-location mb-15 tp-booking-nohide p-relative">
-                                 <div class="tp-booking-location-input tp-booking-toggle no-border p-relative">
-                                    <span class="tp-booking-input-icon">
-                                       <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M8.5999 4.39999C8.5999 3.24019 7.6597 2.29999 6.4999 2.29999C5.3401 2.29999 4.3999 3.24019 4.3999 4.39999C4.3999 5.55979 5.3401 6.49999 6.4999 6.49999C7.6597 6.49999 8.5999 5.55979 8.5999 4.39999Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M8.58959 4.60994C8.78279 4.6685 8.98769 4.7 9.19997 4.7C10.3598 4.7 11.3 3.7598 11.3 2.6C11.3 1.4402 10.3598 0.5 9.19997 0.5C8.11103 0.5 7.21565 1.32884 7.11035 2.39008" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M5.88982 2.39008C5.78452 1.32884 4.88915 0.5 3.8002 0.5C2.6404 0.5 1.7002 1.4402 1.7002 2.6C1.7002 3.7598 2.6404 4.7 3.8002 4.7C4.01248 4.7 4.21741 4.6685 4.41056 4.60994" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M12.5002 7.70001C12.5002 6.04317 11.0228 4.70001 9.2002 4.70001" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M9.8002 9.5C9.8002 7.84316 8.32276 6.5 6.5002 6.5C4.67765 6.5 3.2002 7.84316 3.2002 9.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                          <path d="M3.8 4.70001C1.97746 4.70001 0.5 6.04317 0.5 7.70001" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                       </svg>
-                                    </span>
-                                    <input class="tp-input" type="text" placeholder="02 Adults">
-                                    <span class="tp-booking-input-angle-icon">
-                                       <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M11.5 0.500045C11.5 0.500045 7.44934 6 6 6C4.55057 6 0.5 0.5 0.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                       </svg>
-                                    </span>
-                                 </div>
-                                 <div class="tp-booking-quantity-wrap tp-booking-toggle-active">
-                                    <ul class="tp-booking-quantity-list">
-                                       <li>
-                                          <div class="tp-booking-quantity-content">
-                                             <span>Adult</span>
-                                             <p>Ages 13 or adove</p>
-                                          </div>
-                                          <div class="tp-booking-quantity">
-                                             <span class="tp-dreckment">
-                                                <svg width="11" height="2" viewBox="0 0 11 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                   <path d="M1 1H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                             </span>
-                                             <input class="tp-input" type="text" value="1">
-                                             <span class="tp-increment">
-                                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                   <path d="M1 6H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                   <path d="M5.5 10.5V1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                             </span>
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="tp-booking-quantity-content">
-                                             <span>Children</span>
-                                             <p>Ages 2 – 12</p>
-                                          </div>
-                                          <div class="tp-booking-quantity">
-                                             <span class="tp-dreckment">
-                                                <svg width="11" height="2" viewBox="0 0 11 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                   <path d="M1 1H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                             </span>
-                                             <input class="tp-input" type="text" value="1">
-                                             <span class="tp-increment">
-                                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                   <path d="M1 6H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                   <path d="M5.5 10.5V1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                             </span>
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="tp-booking-quantity-content">
-                                             <span>Infants</span>
-                                             <p>Under 2</p>
-                                          </div>
-                                          <div class="tp-booking-quantity">
-                                             <span class="tp-dreckment">
-                                                <svg width="11" height="2" viewBox="0 0 11 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                   <path d="M1 1H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                             </span>
-                                             <input class="tp-input" type="text" value="1">
-                                             <span class="tp-increment">
-                                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                   <path d="M1 6H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                   <path d="M5.5 10.5V1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                             </span>
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="tp-booking-quantity-content">
-                                             <span>Pets</span>
-                                             <p><a href="#">Service animal?</a></p>
-                                          </div>
-                                          <div class="tp-booking-quantity">
-                                             <span class="tp-dreckment">
-                                                <svg width="11" height="2" viewBox="0 0 11 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                   <path d="M1 1H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                             </span>
-                                             <input class="tp-input" type="text" value="1">
-                                             <span class="tp-increment">
-                                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                   <path d="M1 6H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                   <path d="M5.5 10.5V1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                             </span>
-                                          </div>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                              <button class="tp-btn w-100" type="submit">Search</button>
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-               </div>
             </div>
          </div>
       </div>
@@ -802,10 +532,10 @@
                         <img class="w-100" src="{{ asset('images/categories/safaris.jpg') }}" alt="Safaris Tanzania" style="height:420px;object-fit:cover;">
                         <div class="tp-destination-one-content tp-destination-content">
                            <div class="tp-destination-one-left">
-                              <h2 class="tp-destination-title common-underline mb-0"><a href="{{ url('/tour-grid') }}">Safaris</a></h2>
+                              <h2 class="tp-destination-title common-underline mb-0"><a href="{{ \App\Models\Tour::categoryUrl('Safaris') }}">Safaris</a></h2>
                               <span class="tp-destination-one-duration">7 Parks</span>
                            </div>
-                           <a href="{{ url('/tour-grid') }}" class="tp-destination-one-btn">View All</a>
+                           <a href="{{ \App\Models\Tour::categoryUrl('Safaris') }}" class="tp-destination-one-btn">View All</a>
                         </div>
                      </div>
                   </div>
@@ -818,10 +548,10 @@
                         <img class="w-100" src="{{ asset('images/categories/daytrips.jpg') }}" alt="Day Trips Tanzania" style="height:420px;object-fit:cover;">
                         <div class="tp-destination-one-content tp-destination-content">
                            <div class="tp-destination-one-left">
-                              <h2 class="tp-destination-title common-underline mb-0"><a href="{{ url('/tour-grid') }}">Day Trips</a></h2>
+                              <h2 class="tp-destination-title common-underline mb-0"><a href="{{ \App\Models\Tour::categoryUrl('Day Trips') }}">Day Trips</a></h2>
                               <span class="tp-destination-one-duration">7 Trips</span>
                            </div>
-                           <a href="{{ url('/tour-grid') }}" class="tp-destination-one-btn">View All</a>
+                           <a href="{{ \App\Models\Tour::categoryUrl('Day Trips') }}" class="tp-destination-one-btn">View All</a>
                         </div>
                      </div>
                   </div>
@@ -834,10 +564,10 @@
                         <img class="w-100" src="{{ asset('images/categories/trekking.jpg') }}" alt="Trekking Tanzania" style="height:420px;object-fit:cover;">
                         <div class="tp-destination-one-content tp-destination-content">
                            <div class="tp-destination-one-left">
-                              <h2 class="tp-destination-title common-underline mb-0"><a href="{{ url('/tour-grid') }}">Trekking</a></h2>
+                              <h2 class="tp-destination-title common-underline mb-0"><a href="{{ \App\Models\Tour::categoryUrl('Trekking') }}">Trekking</a></h2>
                               <span class="tp-destination-one-duration">8 Routes</span>
                            </div>
-                           <a href="{{ url('/tour-grid') }}" class="tp-destination-one-btn">View All</a>
+                           <a href="{{ \App\Models\Tour::categoryUrl('Trekking') }}" class="tp-destination-one-btn">View All</a>
                         </div>
                      </div>
                   </div>
@@ -850,10 +580,10 @@
                         <img class="w-100" src="{{ asset('images/categories/zanzibar.jpg') }}" alt="Zanzibar Tours" style="height:420px;object-fit:cover;">
                         <div class="tp-destination-one-content tp-destination-content">
                            <div class="tp-destination-one-left">
-                              <h2 class="tp-destination-title common-underline mb-0"><a href="{{ url('/tour-grid') }}">Zanzibar</a></h2>
+                              <h2 class="tp-destination-title common-underline mb-0"><a href="{{ \App\Models\Tour::categoryUrl('Zanzibar') }}">Zanzibar</a></h2>
                               <span class="tp-destination-one-duration">12 Tours</span>
                            </div>
-                           <a href="{{ url('/tour-grid') }}" class="tp-destination-one-btn">View All</a>
+                           <a href="{{ \App\Models\Tour::categoryUrl('Zanzibar') }}" class="tp-destination-one-btn">View All</a>
                         </div>
                      </div>
                   </div>
