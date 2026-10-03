@@ -20,6 +20,7 @@
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/range-slider.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/spacing.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/main.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/enjoyable.css') }}">
 </head>
 
 <body>
@@ -770,22 +771,27 @@
    <main>
 
       <!-- breadcrumb-area-start -->
-      <div class="tp-breadcrumb-area tp-breadcrumb-ptb tp-breadcrumb-overly bg-position" data-background="{{ asset('turiehtml-10/turie/assets/img/breadcrumb/bg.jpg') }}">
-         <div class="container">
-            <div class="row justify-content-center">
-               <div class="col-lg-12 col-md-8">
-                  <div class="tp-breadcrumb-wrap text-center">
-                     <h2 class="tp-breadcrumb-title text-center mb-0">{{ $category ?? "Travellers' picks" }}</h2>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+      <div class="tp-breadcrumb-area tp-breadcrumb-ptb bg-position" data-background="{{ asset('images/banners/tours-'.($categorySlug ?? 'all').'.jpg') }}"></div>
       <!-- breadcrumb-area-end -->
 
+      @php
+         $sectionTitles = [
+            'safaris' => 'Tanzania Safari Tours',
+            'day-trips' => 'Tanzania Day Trips',
+            'trekking' => 'Kilimanjaro & Trekking Tours',
+            'zanzibar' => 'Zanzibar Beach Holidays',
+         ];
+      @endphp
+
+      @include('turie.partials.tour-category-intro')
+
       <!-- tp-tour-area-start -->
-      <div class="tp-tour-area tp-tour-ptb pt-140 pb-140">
+      <div class="tp-tour-area tp-tour-ptb pt-100 pb-110" data-bg-color="#f7f9f9">
          <div class="container">
+            <div class="tp-section-title-wrap text-center mb-50">
+               <span class="tp-section-subtitle d-inline-block mb-10 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">Tour Package</span>
+               <h2 class="tp-section-title fw-600 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".4s">{{ $sectionTitles[$categorySlug ?? ''] ?? 'Explore All Our Tours' }}</h2>
+            </div>
             @include('turie.partials.tour-grid-listing')
          </div>
       </div>

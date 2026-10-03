@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TourSeeder::class,
             KilimanjaroTrekkingSeeder::class,
+            TanzaniaPackagesSeeder::class,
         ]);
     }
 }

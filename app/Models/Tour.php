@@ -114,6 +114,32 @@ class Tour extends Model
         return route('tours.category', Str::slug($category));
     }
 
+    public function durationBadge(): string
+    {
+        $days = (int) $this->duration_days;
+
+        if ($days < 1) {
+            return Str::upper((string) $this->duration_label);
+        }
+
+        if ($days === 1) {
+            return '1 DAY';
+        }
+
+        $nights = $days - 1;
+
+        return $days.' DAYS / '.$nights.' '.($nights === 1 ? 'NIGHT' : 'NIGHTS');
+    }
+
+    public function routeStops(): array
+    {
+        return collect($this->destinations ?? [])
+            ->pluck('city')
+            ->filter()
+            ->values()
+            ->all();
+    }
+
     public function imageUrl(): string
     {
         if (! $this->image) {
