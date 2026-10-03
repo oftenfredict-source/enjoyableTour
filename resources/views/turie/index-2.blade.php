@@ -21,6 +21,7 @@
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/animate.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/spacing.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/main.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/enjoyable.css') }}">
 </head>
 
 <body>
@@ -1934,7 +1935,7 @@
          <div class="tp-testimonial-two-overly">
             <img src="{{ asset('turiehtml-10/turie/assets/img/testimonial/two/overly.png') }}" alt="">
          </div>
-         <div class="tp-testimonial-area tp-tour-ptb pt-140 pb-110" data-bg-color="#FD4621">
+         <div class="tp-testimonial-area tp-tour-ptb pt-140 pb-110" data-bg-color="#b77e01">
             <div class="container p-relative z-index-2">
                <div class="row align-items-center">
                   <div class="col-xl-4 col-lg-6 mb-30 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
@@ -2102,7 +2103,7 @@
                </div>
             </div>
          </div>
-         <div class="tp-brands-border" data-bg-color="#FD4621">
+         <div class="tp-brands-border" data-bg-color="#b77e01">
             <div class="swiper tp-brands-slider">
                <div class="swiper-wrapper slide-transtion align-items-center">
                   <div class="swiper-slide">

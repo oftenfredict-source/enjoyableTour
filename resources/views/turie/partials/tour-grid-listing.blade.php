@@ -1,28 +1,7 @@
 @php
    $tours = $tours ?? null;
-   $categorySlug = $categorySlug ?? null;
-   $activeStyle = 'color: var(--tp-common-white); background: var(--tp-common-red);';
 @endphp
-            <div class="tp-tour-filter-wrap">
-               <div class="row align-items-center">
-                  <div class="col-md-8">
-                     <div class="tp-tour-filter mb-25 d-flex flex-wrap align-items-center gap-2">
-                        <a href="{{ route('tours.index') }}" class="tp-btn-sm fw-500 tp-ff-inter" @style([$activeStyle => ! $categorySlug])>All</a>
-                        @foreach (\App\Models\Tour::CATEGORIES as $slug => $label)
-                           <a href="{{ \App\Models\Tour::categoryUrl($label) }}" class="tp-btn-sm fw-500 tp-ff-inter" @style([$activeStyle => $categorySlug === $slug])>{{ $label }}</a>
-                        @endforeach
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="tp-tour-filter mb-25 d-flex justify-content-md-end">
-                        @if ($tours && $tours->total())
-                           <span class="tp-tour-filter-result fw-500">Showing {{ $tours->firstItem() }}-{{ $tours->lastItem() }} of {{ $tours->total() }} tours</span>
-                        @endif
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
+            <div class="row justify-content-center">
                @forelse (($tours ?? collect()) as $index => $tour)
                   @include('turie.partials.package-card', [
                      'tour' => $tour,

@@ -22,7 +22,7 @@ class TourSeeder extends Seeder
                 'price' => 1850,
                 'old_price' => 2200,
                 'discount_badge' => '- 16% Off',
-                'image' => 'turiehtml-10/turie/assets/img/tour/01.jpg',
+                'image' => 'images/tours/serengeti-classic-safari.jpg',
                 'rating' => 5.0,
                 'reviews_count' => 24,
                 'accommodation' => 'Safari Lodge & Tented Camp',
@@ -74,7 +74,7 @@ class TourSeeder extends Seeder
                 'price' => 180,
                 'old_price' => 220,
                 'discount_badge' => '- 18% Off',
-                'image' => 'turiehtml-10/turie/assets/img/tour/03.jpg',
+                'image' => 'images/tours/arusha-national-park-day-trip.jpg',
                 'rating' => 4.8,
                 'reviews_count' => 31,
                 'accommodation' => 'Not required',
@@ -112,7 +112,7 @@ class TourSeeder extends Seeder
                 'price' => 790,
                 'old_price' => 950,
                 'discount_badge' => '- 17% Off',
-                'image' => 'turiehtml-10/turie/assets/img/tour/04.jpg',
+                'image' => 'images/tours/zanzibar-beach-stone-town.jpg',
                 'rating' => 4.9,
                 'reviews_count' => 27,
                 'accommodation' => 'Beach resort',
@@ -147,6 +147,8 @@ class TourSeeder extends Seeder
         ];
 
         foreach ($tours as $tour) {
+            $tour['itinerary'] = TanzaniaPackagesSeeder::enrichItinerary($tour);
+
             Tour::query()->updateOrCreate(
                 ['slug' => $tour['slug']],
                 $tour

@@ -21,6 +21,7 @@
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/animate.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/spacing.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/main.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/enjoyable.css') }}">
 </head>
 
 <body>
@@ -877,7 +878,7 @@
                   <div class="tp-about-section-title p-relative pb-20">
                      <span class="tp-section-5-subtitle fw-700 d-flex align-items-center mb-25 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
                         <svg class="mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M12 0L15.2411 8.75891L24 12L15.2411 15.2411L12 24L8.75891 15.2411L0 12L8.75891 8.75891L12 0Z" fill="#FD4621" />
+                           <path d="M12 0L15.2411 8.75891L24 12L15.2411 15.2411L12 24L8.75891 15.2411L0 12L8.75891 8.75891L12 0Z" fill="#b77e01" />
                         </svg>
                         Popular Destination
                      </span>
@@ -1006,27 +1007,27 @@
                               <div class="tp-about-rating-icon">
                                  <span>
                                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                       <path d="M6.30915 0L8.25867 3.94953L12.6183 4.58675L9.46372 7.65931L10.2082 12L6.30915 9.94953L2.41009 12L3.15457 7.65931L0 4.58675L4.35962 3.94953L6.30915 0Z" fill="#FD4621" />
+                                       <path d="M6.30915 0L8.25867 3.94953L12.6183 4.58675L9.46372 7.65931L10.2082 12L6.30915 9.94953L2.41009 12L3.15457 7.65931L0 4.58675L4.35962 3.94953L6.30915 0Z" fill="#b77e01" />
                                     </svg>
                                  </span>
                                  <span>
                                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                       <path d="M6.30915 0L8.25867 3.94953L12.6183 4.58675L9.46372 7.65931L10.2082 12L6.30915 9.94953L2.41009 12L3.15457 7.65931L0 4.58675L4.35962 3.94953L6.30915 0Z" fill="#FD4621" />
+                                       <path d="M6.30915 0L8.25867 3.94953L12.6183 4.58675L9.46372 7.65931L10.2082 12L6.30915 9.94953L2.41009 12L3.15457 7.65931L0 4.58675L4.35962 3.94953L6.30915 0Z" fill="#b77e01" />
                                     </svg>
                                  </span>
                                  <span>
                                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                       <path d="M6.30915 0L8.25867 3.94953L12.6183 4.58675L9.46372 7.65931L10.2082 12L6.30915 9.94953L2.41009 12L3.15457 7.65931L0 4.58675L4.35962 3.94953L6.30915 0Z" fill="#FD4621" />
+                                       <path d="M6.30915 0L8.25867 3.94953L12.6183 4.58675L9.46372 7.65931L10.2082 12L6.30915 9.94953L2.41009 12L3.15457 7.65931L0 4.58675L4.35962 3.94953L6.30915 0Z" fill="#b77e01" />
                                     </svg>
                                  </span>
                                  <span>
                                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                       <path d="M6.30915 0L8.25867 3.94953L12.6183 4.58675L9.46372 7.65931L10.2082 12L6.30915 9.94953L2.41009 12L3.15457 7.65931L0 4.58675L4.35962 3.94953L6.30915 0Z" fill="#FD4621" />
+                                       <path d="M6.30915 0L8.25867 3.94953L12.6183 4.58675L9.46372 7.65931L10.2082 12L6.30915 9.94953L2.41009 12L3.15457 7.65931L0 4.58675L4.35962 3.94953L6.30915 0Z" fill="#b77e01" />
                                     </svg>
                                  </span>
                                  <span>
                                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                       <path d="M6.30915 0L8.25867 3.94953L12.6183 4.58675L9.46372 7.65931L10.2082 12L6.30915 9.94953L2.41009 12L3.15457 7.65931L0 4.58675L4.35962 3.94953L6.30915 0Z" fill="#FD4621" />
+                                       <path d="M6.30915 0L8.25867 3.94953L12.6183 4.58675L9.46372 7.65931L10.2082 12L6.30915 9.94953L2.41009 12L3.15457 7.65931L0 4.58675L4.35962 3.94953L6.30915 0Z" fill="#b77e01" />
                                     </svg>
                                  </span>
                               </div>
@@ -1045,7 +1046,7 @@
                      <div class="tp-about-3-section-title p-relative pb-20">
                         <span class="tp-section-5-subtitle fw-700 d-flex align-items-center mb-25 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
                            <svg class="mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12 0L15.2411 8.75891L24 12L15.2411 15.2411L12 24L8.75891 15.2411L0 12L8.75891 8.75891L12 0Z" fill="#FD4621" />
+                              <path d="M12 0L15.2411 8.75891L24 12L15.2411 15.2411L12 24L8.75891 15.2411L0 12L8.75891 8.75891L12 0Z" fill="#b77e01" />
                            </svg>
                            Popular Destination
                         </span>
@@ -1103,7 +1104,7 @@
                   <div class="tp-about-section-title p-relative pb-20">
                       <span class="tp-section-5-subtitle fw-700 d-flex align-items-center mb-25 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
                         <svg class="mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M12 0L15.2411 8.75891L24 12L15.2411 15.2411L12 24L8.75891 15.2411L0 12L8.75891 8.75891L12 0Z" fill="#FD4621" />
+                           <path d="M12 0L15.2411 8.75891L24 12L15.2411 15.2411L12 24L8.75891 15.2411L0 12L8.75891 8.75891L12 0Z" fill="#b77e01" />
                         </svg>
                         Popular Packages
                      </span>
@@ -3549,7 +3550,7 @@
                   <div class="tp-counter-7-content text-center">
                      <span class="tp-section-5-subtitle fw-700 d-flex align-items-center justify-content-center mb-25 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
                         <svg class="mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M12 0L15.2411 8.75891L24 12L15.2411 15.2411L12 24L8.75891 15.2411L0 12L8.75891 8.75891L12 0Z" fill="#FD4621" />
+                           <path d="M12 0L15.2411 8.75891L24 12L15.2411 15.2411L12 24L8.75891 15.2411L0 12L8.75891 8.75891L12 0Z" fill="#b77e01" />
                         </svg>
                         Travel Support
                      </span>

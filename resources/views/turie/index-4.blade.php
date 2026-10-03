@@ -21,6 +21,7 @@
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/animate.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/spacing.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/main.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/enjoyable.css') }}">
 </head>
 
 <body>
@@ -594,7 +595,7 @@
    <main>
 
       <!-- tp-hero-area-start -->
-      <div class="tp-hero-area tp-hero-4-spacing p-relative z-index-2 fix" data-bg-color="#FD4621">
+      <div class="tp-hero-area tp-hero-4-spacing p-relative z-index-2 fix" data-bg-color="#b77e01">
          <img class="tp-hero-4-bottom-shape" src="{{ asset('turiehtml-10/turie/assets/img/hero/four/bottom-shape.png') }}" alt="">
          <img class="tp-hero-4-shape" src="{{ asset('turiehtml-10/turie/assets/img/hero/four/shape.png') }}" alt="">
          <img class="tp-hero-4-shape-2 tpswing d-none d-md-block" src="{{ asset('turiehtml-10/turie/assets/img/hero/four/shape-2.png') }}" alt="">

@@ -38,13 +38,15 @@ class TourPageController extends Controller
     {
         $tour = Tour::query()->published()->where('slug', $slug)->firstOrFail();
 
-        $related = Tour::query()
+        $sameCategory = Tour::query()
             ->published()
             ->where('id', '!=', $tour->id)
+            ->where('category', $tour->category)
             ->orderBy('sort_order')
-            ->take(3)
+            ->orderByDesc('id')
+            ->take(6)
             ->get();
 
-        return view('turie.tour-show', compact('tour', 'related'));
+        return view('turie.tour-show', ['tour' => $tour, 'others' => $sameCategory]);
     }
 }
