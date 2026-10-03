@@ -684,3 +684,12 @@
 .et-offcanvas-call { display: flex; }
 .et-offcanvas-call .et-header-call-text strong { font-size: 18px; }.et-offcanvas-menu nav ul li, .et-offcanvas-menu nav ul li a { border: 0 !important; }
 .et-offcanvas-menu .tp-sidemenu-close { top: 9px; }
+/* Review platform logos */
+.et-reviews-tab { padding: 14px 16px; }
+.et-reviews-tab-logo { height: 24px; width: auto; display: block; opacity: .55; filter: grayscale(40%); transition: opacity .2s ease, filter .2s ease; }
+.et-reviews-tab-logo.is-wordmark { height: 22px; }
+.et-reviews-tab.is-google .et-reviews-tab-logo { height: 24px; }
+.et-reviews-tab:hover .et-reviews-tab-logo, .et-reviews-tab.active .et-reviews-tab-logo { opacity: 1; filter: none; }
+.et-review-platform img { height: 20px; width: auto; display: block; }
+.et-review-platform img.is-wordmark { height: 17px; }
+.is-google .et-review-platform img { height: 19px; }
