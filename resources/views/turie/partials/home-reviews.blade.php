@@ -5,6 +5,12 @@
       'google' => 'Google',
    ];
 
+   $reviewLogos = [
+      'tripadvisor' => ['src' => 'images/logo/tripadvisor.png', 'wordmark' => true],
+      'facebook' => ['src' => 'images/logo/facebook.png', 'wordmark' => false],
+      'google' => ['src' => 'images/logo/google.png', 'wordmark' => true],
+   ];
+
    $reviews = [
       'tripadvisor' => [
          ['name' => 'Sarah Mitchell', 'country' => 'United Kingdom', 'avatar' => 'images/home/avatar-1.jpg', 'date' => 'Aug 14, 2026', 'time' => '09:20 AM',
@@ -45,17 +51,11 @@
 
       <div class="et-reviews-tabs" role="tablist">
          @foreach ($reviewPlatforms as $platformKey => $platformLabel)
-            <button type="button" class="et-reviews-tab is-{{ $platformKey }} {{ $loop->first ? 'active' : '' }}" data-et-review-tab="{{ $platformKey }}" role="tab">
-               <span class="et-reviews-tab-icon">
-                  @if ($platformKey === 'tripadvisor')
-                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="13" r="4" stroke="currentColor" stroke-width="2.2"/><circle cx="17" cy="13" r="4" stroke="currentColor" stroke-width="2.2"/><circle cx="7" cy="13" r="1.3" fill="currentColor"/><circle cx="17" cy="13" r="1.3" fill="currentColor"/><path d="M3 8.5C5.5 6.5 8.6 5.5 12 5.5s6.5 1 9 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-                  @elseif ($platformKey === 'facebook')
-                     <i class="fa-brands fa-facebook-f"></i>
-                  @else
-                     <i class="fa-brands fa-google"></i>
-                  @endif
-               </span>
-               {{ $platformLabel }}
+            <button type="button" class="et-reviews-tab is-{{ $platformKey }} {{ $loop->first ? 'active' : '' }}" data-et-review-tab="{{ $platformKey }}" role="tab" aria-label="{{ $platformLabel }} reviews">
+               <img class="et-reviews-tab-logo {{ $reviewLogos[$platformKey]['wordmark'] ? 'is-wordmark' : '' }}" src="{{ asset($reviewLogos[$platformKey]['src']) }}" alt="{{ $platformLabel }}">
+               @unless ($reviewLogos[$platformKey]['wordmark'])
+                  <span>{{ $platformLabel }}</span>
+               @endunless
             </button>
          @endforeach
       </div>
@@ -75,14 +75,10 @@
                                     @for ($i = 0; $i < 5; $i++)<i></i>@endfor
                                  </span>
                                  <span class="et-review-platform">
-                                    @if ($platformKey === 'tripadvisor')
-                                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="13" r="4" stroke="currentColor" stroke-width="2.2"/><circle cx="17" cy="13" r="4" stroke="currentColor" stroke-width="2.2"/><circle cx="7" cy="13" r="1.3" fill="currentColor"/><circle cx="17" cy="13" r="1.3" fill="currentColor"/><path d="M3 8.5C5.5 6.5 8.6 5.5 12 5.5s6.5 1 9 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-                                    @elseif ($platformKey === 'facebook')
-                                       <i class="fa-brands fa-facebook-f"></i>
-                                    @else
-                                       <i class="fa-brands fa-google"></i>
-                                    @endif
-                                    {{ $reviewPlatforms[$platformKey] }}
+                                    <img class="{{ $reviewLogos[$platformKey]['wordmark'] ? 'is-wordmark' : '' }}" src="{{ asset($reviewLogos[$platformKey]['src']) }}" alt="{{ $reviewPlatforms[$platformKey] }}">
+                                    @unless ($reviewLogos[$platformKey]['wordmark'])
+                                       {{ $reviewPlatforms[$platformKey] }}
+                                    @endunless
                                  </span>
                               </div>
                               <span class="et-review-quote" aria-hidden="true">&rdquo;</span>
