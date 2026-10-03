@@ -1,5 +1,44 @@
 {{-- Enjoyable Tour — About Us content --}}
+<style>
+   html,
+   body {
+      overflow-x: hidden;
+      max-width: 100%;
+   }
+   .et-about {
+      overflow-x: clip;
+   }
+   .et-about .container,
+   .tp-footer-area .container {
+      max-width: 1120px;
+      padding-left: 24px;
+      padding-right: 24px;
+   }
+   .et-about .tp-who {
+      padding-top: 48px;
+      padding-bottom: 28px;
+   }
+   .et-about .tp-who .tp-about-3-section-title {
+      padding-bottom: 0;
+   }
+   .et-about .tp-who .tp-section-subtitle {
+      margin-bottom: 10px;
+   }
+   .et-about .tp-who .tp-section-title {
+      margin-bottom: 12px;
+      line-height: 1.2;
+      font-size: 34px;
+   }
+   .et-about .tp-who .tp-about-3-awards-wrap {
+      margin-bottom: 22px;
+   }
+   .et-about .tp-who .tp-about-3-content,
+   .et-about .tp-who .tp-about-3-thumb {
+      margin-bottom: 8px;
+   }
+</style>
 
+<div class="et-about">
       <!-- breadcrumb-area-start -->
       <div class="tp-breadcrumb-area tp-breadcrumb-ptb tp-breadcrumb-overly bg-position" data-background="{{ asset('images/about/breadcrumb.jpg') }}">
          <div class="container">
@@ -16,7 +55,7 @@
       <!-- breadcrumb-area-end -->
 
       <!-- tp-about-area-start -->
-      <div class="tp-about-area p-relative tp-tour-ptb z-index-2 pt-140 pb-60">
+      <div class="tp-about-area tp-who p-relative z-index-2">
          <img class="tp-about-3-shape tptranslateX2" src="{{ asset('turiehtml-10/turie/assets/img/about/three/shape.png') }}" alt="">
          <div class="container">
             <div class="row align-items-center">
@@ -50,7 +89,7 @@
                </div>
                <div class="col-xl-6">
                   <div class="tp-about-3-content mb-30 wow fadeInRight" data-wow-duration=".9s" data-wow-delay=".3s">
-                     <div class="tp-about-3-section-title p-relative pb-20">
+                     <div class="tp-about-3-section-title p-relative">
                         <span class="tp-section-subtitle d-inline-block mb-15">Who we are</span>
                         <h2 class="tp-section-title fw-600 mb-15">Your local partner for<br> Tanzania adventures</h2>
                         <p class="mb-15">
@@ -350,3 +389,4 @@
             </div>
          </div>
       </div>
+</div>
