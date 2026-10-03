@@ -33,6 +33,9 @@ Route::get('/tours/{category}', [TourPageController::class, 'grid'])
     ->whereIn('category', array_keys(\App\Models\Tour::CATEGORIES))
     ->name('tours.category');
 Route::get('/tour/{slug}', [TourPageController::class, 'show'])->name('tour.show');
+Route::get('/find-your-tour', [TourPageController::class, 'finder'])->name('tours.finder');
+Route::permanentRedirect('/tour-grid-sidebar', '/find-your-tour');
+Route::permanentRedirect('/tour-details', '/tours');
 
 /*
 |--------------------------------------------------------------------------
@@ -43,51 +46,16 @@ Route::get('/tour/{slug}', [TourPageController::class, 'show'])->name('tour.show
 */
 
 $turiePages = [
-    '/index-2' => 'index-2',
-    '/index-3' => 'index-3',
-    '/index-4' => 'index-4',
-    '/index-5' => 'index-5',
-    '/index-6' => 'index-6',
-    '/index-7' => 'index-7',
     '/about' => 'about',
     '/contact' => 'contact',
     '/faq' => 'faq',
     '/testimonial' => 'testimonial',
     '/privacy-policy' => 'privacy-policy',
-    '/career' => 'career',
-    '/career-details' => 'career-details',
-    '/login' => 'login',
-    '/register' => 'register',
-    '/forgot' => 'forgot',
     '/blog' => 'blog',
     '/blog-list' => 'blog-list',
     '/blog-standard' => 'blog-standard',
     '/blog-details' => 'blog-details',
     '/blog-details-2' => 'blog-details-2',
-    '/shop' => 'shop',
-    '/shop-details' => 'shop-details',
-    '/cart' => 'cart',
-    '/checkout' => 'checkout',
-    '/wishlist' => 'wishlist',
-    '/city-details' => 'city-details',
-    '/city-details-2' => 'city-details-2',
-    '/city-details-3' => 'city-details-3',
-    '/city-details-4' => 'city-details-4',
-    '/tour-grid-map' => 'tour-grid-map',
-    '/tour-grid-sidebar' => 'tour-grid-sidebar',
-    '/tour-list-left-sidebar' => 'tour-list-left-sidebar',
-    '/tour-list-right-sidebar' => 'tour-list-right-sidebar',
-    '/tour-list-map' => 'tour-list-map',
-    '/tour-details' => 'tour-details',
-    '/tour-details-2' => 'tour-details-2',
-    '/tour-details-3' => 'tour-details-3',
-    '/tour-details-4' => 'tour-details-4',
-    '/tour-details-5' => 'tour-details-5',
-    '/tour-details-6' => 'tour-details-6',
-    '/tour-details-7' => 'tour-details-7',
-    '/tour-checkout' => 'tour-checkout',
-    '/tour-guide' => 'tour-guide',
-    '/tour-guide-details' => 'tour-guide-details',
 ];
 
 foreach ($turiePages as $uri => $view) {

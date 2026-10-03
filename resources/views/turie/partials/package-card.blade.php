@@ -2,8 +2,8 @@
   $delay = $delay ?? '.2s';
   $stops = $tour->routeStops();
 @endphp
-<div class="col-xl-4 col-lg-6 col-md-6">
-  <div class="et-package-card mb-30 wow fadeInUp" data-wow-duration=".9s" data-wow-delay="{{ $delay }}">
+<div class="{{ $colClass ?? 'col-xl-4 col-lg-6 col-md-6' }}">
+  <div class="et-package-card mb-30 {{ ($animate ?? true) ? 'wow fadeInUp' : '' }}" data-wow-duration=".9s" data-wow-delay="{{ $delay }}">
     <div class="et-package-thumb">
       <a href="{{ $tour->detailUrl() }}">
         <img src="{{ $tour->imageUrl() }}" alt="{{ $tour->title }}">
