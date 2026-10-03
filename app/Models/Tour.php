@@ -7,6 +7,13 @@ use Illuminate\Support\Str;
 
 class Tour extends Model
 {
+    public const CATEGORIES = [
+        'safaris' => 'Safaris',
+        'day-trips' => 'Day Trips',
+        'trekking' => 'Trekking',
+        'zanzibar' => 'Zanzibar',
+    ];
+
     protected $fillable = [
         'title',
         'slug',
@@ -100,6 +107,11 @@ class Tour extends Model
     public function scopeFeatured($query)
     {
         return $query->where('is_featured', true);
+    }
+
+    public static function categoryUrl(string $category): string
+    {
+        return route('tours.category', Str::slug($category));
     }
 
     public function imageUrl(): string

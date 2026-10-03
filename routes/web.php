@@ -27,6 +27,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/tour-grid', [TourPageController::class, 'grid'])->name('turie.tour-grid');
+Route::get('/tours', [TourPageController::class, 'grid'])->name('tours.index');
+Route::get('/tours/{category}', [TourPageController::class, 'grid'])
+    ->whereIn('category', array_keys(\App\Models\Tour::CATEGORIES))
+    ->name('tours.category');
 Route::get('/tour/{slug}', [TourPageController::class, 'show'])->name('tour.show');
 
 /*
@@ -68,7 +73,6 @@ $turiePages = [
     '/city-details-2' => 'city-details-2',
     '/city-details-3' => 'city-details-3',
     '/city-details-4' => 'city-details-4',
-    '/tour-grid' => 'tour-grid',
     '/tour-grid-map' => 'tour-grid-map',
     '/tour-grid-sidebar' => 'tour-grid-sidebar',
     '/tour-list-left-sidebar' => 'tour-list-left-sidebar',
