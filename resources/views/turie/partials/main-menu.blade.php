@@ -18,6 +18,16 @@
                            <li class="{{ request()->routeIs('tours.finder') ? 'active' : '' }}">
                               <a href="{{ route('tours.finder') }}">Find Your Tour</a>
                            </li>
+                           <li class="has-dropdown {{ request()->routeIs('plan.*', 'parks.*') ? 'active' : '' }}">
+                              <a href="{{ route('plan.index') }}">Plan</a>
+                              <ul class="sub-menu">
+                                 @foreach (\App\Support\PlanningData::tools() as $planKey => $planTool)
+                                    @if ($planKey !== 'hub')
+                                       <li><a href="{{ $planTool['url'] }}">{{ $planTool['label'] }}</a></li>
+                                    @endif
+                                 @endforeach
+                              </ul>
+                           </li>
                            <li class="{{ request()->is('contact') ? 'active' : '' }}">
                               <a href="{{ url('/contact') }}">Contact</a>
                            </li>

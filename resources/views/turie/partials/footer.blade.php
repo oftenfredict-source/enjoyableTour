@@ -128,6 +128,7 @@
                <li><a href="{{ url('/') }}">Home</a></li>
                <li><a href="{{ url('/about') }}">About us</a></li>
                <li><a href="{{ url('/tours') }}">Tours</a></li>
+               <li><a href="{{ route('plan.index') }}">Plan your trip</a></li>
                <li><a href="{{ url('/faq') }}">FAQ</a></li>
                <li><a href="{{ url('/contact') }}">Contact</a></li>
             </ul>

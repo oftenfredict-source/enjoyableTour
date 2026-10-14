@@ -196,116 +196,124 @@
       </div>
 
       <!-- tp-counter-area-start -->
-      <div class="tp-counter-area fix p-relative tp-counter-2-pt pt-120 pb-40">
+      <div class="et-about-stats">
+         <div class="et-about-stats-bg" style="background-image: url('{{ asset('images/about/ocean-stats.jpg') }}')"></div>
          <div class="container">
-            <div class="row">
-               <div class="col-lg-12">
-                  <div class="tp-counter-2-wrap d-flex justify-content-between flex-wrap gap-5">
-                     <div class="tp-counter-2-content column-1 text-center">
-                        <h3 class="tp-counter-7-count fw-600 uppercase mb-0 lh-1"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="2"></span>+</h3>
-                        <span class="tp-counter-7-dec fw-500 mb-15 d-block">Years of Experience</span>
-                     </div>
-                     <div class="tp-counter-2-content column-2 text-center">
-                        <h3 class="tp-counter-7-count fw-600 uppercase mb-0 lh-1"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="2" data-purecounter-separator="true"></span>+</h3>
-                        <span class="tp-counter-7-dec fw-500 mb-15 d-block">Happy Travelers</span>
-                     </div>
-                     <div class="tp-counter-2-content column-3 text-center">
-                        <h3 class="tp-counter-7-count fw-600 uppercase mb-0 lh-1"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="2"></span>+</h3>
-                        <span class="tp-counter-7-dec fw-500 mb-15 d-block">Safari &amp; Trek Routes</span>
-                     </div>
-                     <div class="tp-counter-2-content column-4 text-center">
-                        <h3 class="tp-counter-7-count fw-600 uppercase mb-0 lh-1"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2"></span>%</h3>
-                        <span class="tp-counter-7-dec fw-500 mb-15 d-block">Guest Satisfaction</span>
-                     </div>
-                  </div>
+            <div class="et-stat-grid">
+               <div class="et-stat">
+                  <h3><span class="purecounter" data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="2"></span>+</h3>
+                  <span>Years of Experience</span>
+               </div>
+               <div class="et-stat">
+                  <h3><span class="purecounter" data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="2" data-purecounter-separator="true"></span>+</h3>
+                  <span>Happy Travelers</span>
+               </div>
+               <div class="et-stat">
+                  <h3><span class="purecounter" data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="2"></span>+</h3>
+                  <span>Safari &amp; Trek Routes</span>
+               </div>
+               <div class="et-stat">
+                  <h3><span class="purecounter" data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2"></span>%</h3>
+                  <span>Guest Satisfaction</span>
                </div>
             </div>
          </div>
       </div>
+      <script>
+         (function () {
+            var section = document.querySelector('.et-about-stats');
+            var bg = section && section.querySelector('.et-about-stats-bg');
+            if (!bg) return;
+            section.addEventListener('mousemove', function (event) {
+               var box = section.getBoundingClientRect();
+               var x = (event.clientX - box.left) / box.width - 0.5;
+               var y = (event.clientY - box.top) / box.height - 0.5;
+               bg.style.animation = 'none';
+               bg.style.transform = 'scale(1.08) translate(' + (x * -28) + 'px, ' + (y * -16) + 'px)';
+            });
+            section.addEventListener('mouseleave', function () {
+               bg.style.animation = '';
+               bg.style.transform = '';
+            });
+         })();
+      </script>
       <!-- tp-counter-area-end -->
 
       <!-- Why choose us -->
-      <div class="tp-chose-area pt-100 pb-80">
+      <div class="et-about-why">
          <div class="container">
             <div class="row justify-content-center mb-40">
                <div class="col-lg-8 text-center">
                   <span class="tp-section-subtitle d-inline-block mb-15">Why Enjoyable Tour</span>
-                  <h2 class="tp-section-title fw-600">Travel with confidence in Tanzania</h2>
+                  <h2 class="tp-section-title fw-600 mb-0">Travel with confidence in Tanzania</h2>
                </div>
             </div>
-            <div class="row">
-               <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".2s">
-                  <div class="tp-about-two-service icon-animetion-wrap text-center mb-30">
-                     <h4 class="tp-about-two-service-title">Local Knowledge</h4>
-                     <p class="tp-about-two-service-dec">Guides who know the parks,<br> trails, seasons, and culture.</p>
-                  </div>
+            <div class="et-why-grid">
+               <div class="et-why-card">
+                  <span class="et-why-icon"><i class="fa-light fa-compass"></i></span>
+                  <h3>Local Knowledge</h3>
+                  <p>Guides who know the parks, trails, seasons, and culture.</p>
                </div>
-               <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                  <div class="tp-about-two-service icon-animetion-wrap text-center mb-30">
-                     <h4 class="tp-about-two-service-title">Safety First</h4>
-                     <p class="tp-about-two-service-dec">Licensed operators, vetted<br> vehicles, and mountain protocols.</p>
-                  </div>
+               <div class="et-why-card">
+                  <span class="et-why-icon"><i class="fa-light fa-shield"></i></span>
+                  <h3>Safety First</h3>
+                  <p>Licensed operators, vetted vehicles, and mountain protocols.</p>
                </div>
-               <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".4s">
-                  <div class="tp-about-two-service icon-animetion-wrap text-center mb-30">
-                     <h4 class="tp-about-two-service-title">Custom Itineraries</h4>
-                     <p class="tp-about-two-service-dec">Private or group trips tailored<br> to your budget and pace.</p>
-                  </div>
+               <div class="et-why-card">
+                  <span class="et-why-icon"><i class="fa-light fa-route"></i></span>
+                  <h3>Custom Itineraries</h3>
+                  <p>Private or group trips tailored to your budget and pace.</p>
                </div>
-               <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                  <div class="tp-about-two-service icon-animetion-wrap text-center mb-30">
-                     <h4 class="tp-about-two-service-title">Fair &amp; Transparent</h4>
-                     <p class="tp-about-two-service-dec">Clear pricing — no surprise<br> fees on the trail or safari.</p>
-                  </div>
+               <div class="et-why-card">
+                  <span class="et-why-icon"><i class="fa-light fa-scale-balanced"></i></span>
+                  <h3>Fair &amp; Transparent</h3>
+                  <p>Clear pricing, with no surprise fees on the trail or safari.</p>
                </div>
             </div>
          </div>
       </div>
 
       <!-- How we work -->
-      <div class="tp-process-area pt-80 pb-40" data-bg-color="#f7f9f9">
+      <div class="et-about-flow">
          <div class="container">
-            <div class="row">
-               <div class="col-12">
-                  <div class="tp-process-title-wrap mb-45 text-center">
-                     <span class="tp-section-subtitle d-inline-block mb-15">How it works</span>
-                     <h2 class="tp-section-title fw-600 wow fadeInUp" data-wow-duration=".9s" data-wow-delay=".3s">Book your Tanzania trip in 4 steps</h2>
-                  </div>
+            <div class="tp-process-title-wrap mb-10 text-center">
+               <span class="tp-section-subtitle d-inline-block mb-15">How it works</span>
+               <h2 class="tp-section-title fw-600">Book your Tanzania trip in 4 steps</h2>
+            </div>
+            <div class="et-flow">
+               <svg class="et-flow-lines" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M166 71 C 230 78, 270 136, 326 143" />
+                  <path d="M421 143 C 480 136, 520 78, 579 71" />
+                  <path d="M675 71 C 740 78, 780 136, 834 143" />
+               </svg>
+               <div class="et-flow-item is-high">
+                  <div class="et-flow-bubble"><span>1</span><i class="fa-light fa-comments"></i></div>
+                  <h3>Enquire</h3>
+                  <p>Tell us your dates, group size, and interest — trek, safari, or day trip.</p>
                </div>
-               <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6">
-                  <div class="tp-process-item mb-30">
-                     <h2 class="tp-process-title mb-0">01 · Enquire</h2>
-                     <p class="tp-process-dec mb-0">Tell us your dates, group size, and interest — trek, safari, or day trip.</p>
-                  </div>
+               <div class="et-flow-item is-low">
+                  <h3>Plan</h3>
+                  <p>We propose routes, lodges or camps, and a clear quote tailored for you.</p>
+                  <div class="et-flow-bubble"><span>2</span><i class="fa-light fa-calendar-days"></i></div>
                </div>
-               <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6">
-                  <div class="tp-process-item mb-30">
-                     <h2 class="tp-process-title mb-0">02 · Plan</h2>
-                     <p class="tp-process-dec mb-0">We propose routes, lodges/camps, and a clear quote tailored for you.</p>
-                  </div>
+               <div class="et-flow-item is-high">
+                  <div class="et-flow-bubble"><span>3</span><i class="fa-light fa-file-signature"></i></div>
+                  <h3>Confirm</h3>
+                  <p>Secure your booking and receive a full itinerary with packing tips.</p>
                </div>
-               <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6">
-                  <div class="tp-process-item mb-30">
-                     <h2 class="tp-process-title mb-0">03 · Confirm</h2>
-                     <p class="tp-process-dec mb-0">Secure your booking and receive a full itinerary with packing tips.</p>
-                  </div>
-               </div>
-               <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6">
-                  <div class="tp-process-item mb-30">
-                     <h2 class="tp-process-title mb-0">04 · Enjoy</h2>
-                     <p class="tp-process-dec mb-0">Arrive in Tanzania — we handle airport meet, guides, and the adventure.</p>
-                  </div>
+               <div class="et-flow-item is-low">
+                  <h3>Enjoy</h3>
+                  <p>Arrive in Tanzania. We handle the airport meet, guides, and the adventure.</p>
+                  <div class="et-flow-bubble"><span>4</span><i class="fa-light fa-plane"></i></div>
                </div>
             </div>
-            <div class="row mt-20 mb-40">
-               <div class="col-12 text-center">
-                  <a href="{{ url('/contact') }}" class="tp-btn">Start Planning
+            <div class="text-center mt-10 mb-10">
+               <a href="{{ url('/contact') }}" class="tp-btn">Start Planning
                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.75 4.75H0.750029" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M6.08307 8.75C6.08307 8.75 10.083 5.80401 10.083 4.74995C10.083 3.69589 6.083 0.75 6.083 0.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                      </svg>
                   </a>
-               </div>
             </div>
          </div>
       </div>
