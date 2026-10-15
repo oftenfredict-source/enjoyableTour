@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
+   @include('turie.partials.theme-boot')
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
    <title>{{ $title }} | {{ config('app.name') }}</title>

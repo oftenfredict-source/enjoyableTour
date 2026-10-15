@@ -46,6 +46,7 @@
             </div>
 
             <div class="et-header-right">
+               @include('turie.partials.theme-toggle')
                @if ($headerPhone)
                   <a href="tel:{{ $headerPhoneLink }}" class="et-header-call d-none d-sm-flex">
                      <span class="et-header-call-icon"><i class="fa-light fa-phone-volume"></i></span>
@@ -66,3 +67,4 @@
       </div>
    </div>
 </header>
+<script src="{{ asset('js/theme.js') }}"></script>

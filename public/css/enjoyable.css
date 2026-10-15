@@ -679,8 +679,8 @@
 .et-offcanvas-menu nav ul li { position: relative; list-style: none; }
 .et-offcanvas-menu nav > ul > li > a { display: block; padding: 13px 40px 13px 0; font-size: 15px; font-weight: 500; text-transform: uppercase; color: #111; letter-spacing: .02em; }
 .et-offcanvas-menu nav > ul > li.active > a, .et-offcanvas-menu nav ul li a:hover { color: var(--et-brand-gold); }
-.et-offcanvas-menu .sub-menu { margin: 0 0 8px 14px !important; padding: 0; border-left: 2px solid rgba(183, 126, 1, .25); }
-.et-offcanvas-menu .sub-menu li a { display: block; padding: 8px 0 8px 14px; font-size: 14px; color: #3a3d42; text-transform: none; }
+.et-offcanvas-menu .sub-menu { margin: 0 0 8px 0 !important; padding: 0; border: 0 !important; }
+.et-offcanvas-menu .sub-menu li a { display: block; padding: 8px 0; font-size: 14px; color: #3a3d42; text-transform: none; }
 .et-offcanvas-menu .tp-sidemenu-close { top: 8px; right: 0; width: 30px; height: 30px; border: 0; background: none; color: #111; }
 .et-offcanvas-menu .tp-sidemenu-close i { display: none; }
 .et-offcanvas-menu .tp-sidemenu-close::before { content: '+'; font-size: 22px; font-weight: 300; line-height: 1; display: inline-block; transition: transform .25s ease; }
@@ -907,3 +907,93 @@
   .et-flow-item.is-low { flex-direction: column-reverse; }
   .et-flow-item.is-low h3 { margin-top: 16px; }
 }
+
+.et-theme-toggle {
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(17, 17, 17, .18);
+  background: #fff;
+  color: #111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex: 0 0 40px;
+  cursor: pointer;
+}
+.et-offcanvas-footer .et-theme-toggle { margin: 0 0 4px; }
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --tp-common-white: #141b22;
+  --tp-common-white-2: #1b242d;
+  --tp-common-black: #f3f6f8;
+  --tp-grey-1: #c5ced6;
+  --tp-grey-2: #9aa6b2;
+  --tp-grey-3: #1b242d;
+  --tp-border-1: rgba(255, 255, 255, .1);
+  --tp-common-petals: #1a2a22;
+}
+html[data-theme="dark"] body { background: #10161c; color: #e6edf2; }
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+html[data-theme="dark"] .tp-section-title,
+html[data-theme="dark"] .et-header-logo span,
+html[data-theme="dark"] .et-header-menu nav > ul > li > a,
+html[data-theme="dark"] .et-header-call-text small { color: #f4f7fa; }
+html[data-theme="dark"] .et-header-main,
+html[data-theme="dark"] .et-header-main.header-sticky { background: rgba(16, 22, 28, .96); }
+html[data-theme="dark"] .et-header-call-icon { border-right-color: rgba(255, 255, 255, .16); }
+html[data-theme="dark"] .tp-header-toogle { border-color: rgba(255, 255, 255, .28); }
+html[data-theme="dark"] .tp-offcanvas.et-offcanvas,
+html[data-theme="dark"] .et-plan-panel,
+html[data-theme="dark"] .et-package-card,
+html[data-theme="dark"] .et-why-card,
+html[data-theme="dark"] .et-kili-side,
+html[data-theme="dark"] .et-kili-route,
+html[data-theme="dark"] .et-plan-table-wrap,
+html[data-theme="dark"] .et-budget-lines li,
+html[data-theme="dark"] .et-flow-bubble,
+html[data-theme="dark"] .tp-about-area,
+html[data-theme="dark"] .tp-destination-area { background: #172029; color: #e6edf2; }
+html[data-theme="dark"] .et-offcanvas-menu nav > ul > li > a,
+html[data-theme="dark"] .et-offcanvas-menu .sub-menu li a,
+html[data-theme="dark"] .et-offcanvas-link,
+html[data-theme="dark"] .et-offcanvas-close { color: #f4f7fa; }
+html[data-theme="dark"] .et-offcanvas-close { border-color: rgba(255, 255, 255, .35); background: transparent; }
+html[data-theme="dark"] .et-offcanvas-footer { border-top-color: rgba(255, 255, 255, .1); }
+html[data-theme="dark"] .et-plan-panel h2,
+html[data-theme="dark"] .et-plan-tours h2,
+html[data-theme="dark"] .et-park h2,
+html[data-theme="dark"] .et-plan-best,
+html[data-theme="dark"] .et-kili-route strong,
+html[data-theme="dark"] .et-build-days strong,
+html[data-theme="dark"] .et-budget-lines strong,
+html[data-theme="dark"] .et-why-card h3,
+html[data-theme="dark"] .et-flow-item h3 { color: #f4f7fa; }
+html[data-theme="dark"] .et-plan-kicker,
+html[data-theme="dark"] .et-plan-fine,
+html[data-theme="dark"] .et-kili-route span,
+html[data-theme="dark"] .et-why-card p,
+html[data-theme="dark"] .et-flow-item p,
+html[data-theme="dark"] .et-build-days li div span,
+html[data-theme="dark"] .et-budget-lines span { color: #b7c3ce; }
+html[data-theme="dark"] .et-plan-form select,
+html[data-theme="dark"] .et-plan-form input,
+html[data-theme="dark"] .et-kili-fit-grid select,
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea { background: #10161c; color: #f4f7fa; border-color: rgba(255, 255, 255, .14); }
+html[data-theme="dark"] .et-theme-toggle { background: #1c2630; color: #f6c35c; border-color: rgba(255, 255, 255, .2); }
+html[data-theme="dark"] .et-plan-links .tp-btn-sm { background: #1c2630; color: #f4f7fa; border-color: rgba(255, 255, 255, .12); }
+html[data-theme="dark"] .et-month-key li,
+html[data-theme="dark"] .et-month strong { color: #f4f7fa; }
+html[data-theme="dark"] .et-plan-table th,
+html[data-theme="dark"] .et-plan-table td { color: #e6edf2; }
+html[data-theme="dark"] .et-plan-more { color: #f6c35c; }
