@@ -679,8 +679,8 @@
 .et-offcanvas-menu nav ul li { position: relative; list-style: none; }
 .et-offcanvas-menu nav > ul > li > a { display: block; padding: 13px 40px 13px 0; font-size: 15px; font-weight: 500; text-transform: uppercase; color: #111; letter-spacing: .02em; }
 .et-offcanvas-menu nav > ul > li.active > a, .et-offcanvas-menu nav ul li a:hover { color: var(--et-brand-gold); }
-.et-offcanvas-menu .sub-menu { margin: 0 0 8px 0 !important; padding: 0; border: 0 !important; }
-.et-offcanvas-menu .sub-menu li a { display: block; padding: 8px 0; font-size: 14px; color: #3a3d42; text-transform: none; }
+.et-offcanvas-menu .sub-menu { margin: 0 0 6px 18px !important; padding: 0; border: 0 !important; }
+.et-offcanvas-menu .sub-menu li a { display: block; padding: 12px 8px 12px 0; font-size: 14px; font-weight: 600; letter-spacing: .03em; color: #3a3d42; text-transform: uppercase; border-bottom: 1px solid rgba(17, 17, 17, .12) !important; }
 .et-offcanvas-menu .tp-sidemenu-close { top: 8px; right: 0; width: 30px; height: 30px; border: 0; background: none; color: #111; }
 .et-offcanvas-menu .tp-sidemenu-close i { display: none; }
 .et-offcanvas-menu .tp-sidemenu-close::before { content: '+'; font-size: 22px; font-weight: 300; line-height: 1; display: inline-block; transition: transform .25s ease; }
@@ -691,7 +691,8 @@
 .et-offcanvas-link { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: #111; }
 .et-offcanvas-link i { font-size: 16px; color: var(--et-brand-gold); }
 .et-offcanvas-call { display: flex; }
-.et-offcanvas-call .et-header-call-text strong { font-size: 18px; }.et-offcanvas-menu nav ul li, .et-offcanvas-menu nav ul li a { border: 0 !important; }
+.et-offcanvas-call .et-header-call-text strong { font-size: 18px; }
+.et-offcanvas-menu nav > ul > li, .et-offcanvas-menu nav > ul > li > a { border: 0 !important; }
 .et-offcanvas-menu .tp-sidemenu-close { top: 9px; }
 /* Review platform logos */
 .et-reviews-tab { padding: 14px 16px; }

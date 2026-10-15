@@ -18,23 +18,19 @@
       }
    }
 
-   document.querySelectorAll('.et-tools-open').forEach(function (button) {
-      button.addEventListener('click', function () {
+   document.addEventListener('click', function (event) {
+      if (event.target.closest('.et-tools-open')) {
+         event.preventDefault();
          setOpen(true);
-      });
-   });
-   document.querySelectorAll('.et-tools-close').forEach(function (button) {
-      button.addEventListener('click', function () {
+         return;
+      }
+      if (event.target.closest('.et-tools-close') || event.target === overlay) {
          setOpen(false);
-      });
-   });
-   overlay.addEventListener('click', function () {
-      setOpen(false);
-   });
-   document.querySelectorAll('.tp-header-toogle').forEach(function (button) {
-      button.addEventListener('click', function () {
+         return;
+      }
+      if (event.target.closest('.tp-header-toogle')) {
          setOpen(false);
-      });
+      }
    });
 
    function scrollDestinations(direction) {
