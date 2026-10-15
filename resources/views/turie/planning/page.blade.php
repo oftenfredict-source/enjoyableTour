@@ -16,7 +16,7 @@
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/animate.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/spacing.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/main.css') }}">
-   <link rel="stylesheet" href="{{ asset('css/enjoyable.css') }}?v={{ filemtime(public_path('css/enjoyable.css')) }}">
+   <link rel="stylesheet" href="{{ asset('css/enjoyable.live.css') }}">
    <style>
       .et-kili-map { position: relative; border-radius: 14px; overflow: hidden; }
       .et-kili-map > img { width: 100%; display: block; }

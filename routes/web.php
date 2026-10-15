@@ -35,6 +35,10 @@ Route::get('/tours/{category}', [TourPageController::class, 'grid'])
     ->name('tours.category');
 Route::get('/tour/{slug}', [TourPageController::class, 'show'])->name('tour.show');
 Route::get('/find-your-tour', [TourPageController::class, 'finder'])->name('tours.finder');
+Route::get('/css/enjoyable.live.css', [PlanningController::class, 'stylesheet']);
+Route::get('/images/{folder}/{file}', [PlanningController::class, 'publicImage'])
+    ->where('folder', 'planning|about')
+    ->where('file', '[A-Za-z0-9._-]+');
 Route::get('/plan', [PlanningController::class, 'index'])->name('plan.index');
 Route::get('/plan/best-time', [PlanningController::class, 'bestTime'])->name('plan.best-time');
 Route::get('/plan/safari-budget', [PlanningController::class, 'budget'])->name('plan.budget');

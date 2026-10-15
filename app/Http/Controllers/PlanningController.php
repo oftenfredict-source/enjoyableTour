@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Support\PlanningData;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class PlanningController extends Controller
 {
@@ -127,6 +128,30 @@ class PlanningController extends Controller
             'parks',
             ['park' => $park, 'parks' => PlanningData::parks()]
         );
+    }
+
+    public function stylesheet(): BinaryFileResponse
+    {
+        $path = public_path('css/enjoyable.css');
+        abort_unless(is_file($path), 404);
+
+        return response()->file($path, [
+            'Content-Type' => 'text/css; charset=UTF-8',
+            'Cache-Control' => 'no-cache',
+        ]);
+    }
+
+    public function publicImage(string $folder, string $file): BinaryFileResponse
+    {
+        abort_unless(in_array($folder, ['planning', 'about'], true), 404);
+        abort_unless(preg_match('/^[A-Za-z0-9._-]+$/', $file) === 1, 404);
+
+        $path = public_path('images/'.$folder.'/'.$file);
+        abort_unless(is_file($path), 404);
+
+        return response()->file($path, [
+            'Cache-Control' => 'public, max-age=86400',
+        ]);
     }
 
     private function page(string $title, string $description, string $partial, string $active, array $data = []): View
