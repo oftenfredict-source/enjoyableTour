@@ -19,7 +19,6 @@
    </div>
 
    <div class="et-offcanvas-footer">
-      @include('turie.partials.theme-toggle')
       <a href="mailto:{{ $offcanvasEmail }}" class="et-offcanvas-link">
          <i class="fa-light fa-envelope"></i> {{ $offcanvasEmail }}
       </a>
@@ -35,4 +34,5 @@
    </div>
 </div>
 <div class="tp-offcanvas-overlay"></div>
+@include('turie.partials.tools-panel')
 <!-- tp-offcanvas end -->

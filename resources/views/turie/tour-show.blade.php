@@ -2,7 +2,6 @@
 <html class="no-js" lang="zxx">
 
 <head>
-   @include('turie.partials.theme-boot')
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
    <title>{{ $tour->title }} | {{ config('app.name') }}</title>

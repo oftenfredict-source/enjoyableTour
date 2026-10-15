@@ -46,7 +46,6 @@
             </div>
 
             <div class="et-header-right">
-               @include('turie.partials.theme-toggle')
                @if ($headerPhone)
                   <a href="tel:{{ $headerPhoneLink }}" class="et-header-call d-none d-sm-flex">
                      <span class="et-header-call-icon"><i class="fa-light fa-phone-volume"></i></span>
@@ -57,6 +56,9 @@
                   </a>
                @endif
                <div class="tp-header-toogle-wrapper d-xl-none ml-15">
+                  <button type="button" class="et-tools-open" aria-label="Open trip tools">
+                     <span></span><span></span><span></span><span></span>
+                  </button>
                   <button class="tp-header-toogle" aria-label="Open menu">
                      <span></span>
                      <span></span>
@@ -67,4 +69,3 @@
       </div>
    </div>
 </header>
-<script src="{{ asset('js/theme.js') }}"></script>
