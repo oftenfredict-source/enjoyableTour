@@ -16,16 +16,16 @@
       <button type="button" class="et-tools-close" aria-label="Close trip tools"><i class="fa-light fa-xmark"></i></button>
    </div>
    <div class="et-tools-body">
-      <h2>Tour Tools</h2>
+      <h2 data-i18n="tools.title">Tour Tools</h2>
       <div class="et-tools-grid">
-         @foreach ($toolCards as $tool)
+         @foreach ($toolCards as $toolKey => $tool)
             <a href="{{ $tool['url'] }}">
                <i class="fa-light {{ $tool['icon'] }}"></i>
-               <span>{{ $tool['label'] }}</span>
+               <span data-i18n="tool.{{ $toolKey }}">{{ $tool['label'] }}</span>
             </a>
          @endforeach
       </div>
-      <h2>Our Destinations</h2>
+      <h2 data-i18n="tools.destinations">Our Destinations</h2>
       <div class="et-tools-dests" id="et-tools-dests">
          @foreach ($toolParks as $slug => $park)
             <a class="et-tools-dest" href="{{ route('parks.show', $slug) }}">
@@ -37,19 +37,19 @@
       </div>
       <div class="et-tools-nav">
          <button type="button" class="et-tools-prev" aria-label="Previous destinations"><i class="fa-light fa-arrow-left"></i></button>
-         <a class="et-tools-all" href="{{ route('parks.index') }}">View All</a>
+         <a class="et-tools-all" href="{{ route('parks.index') }}" data-i18n="tools.viewAll">View All</a>
          <button type="button" class="et-tools-next" aria-label="Next destinations"><i class="fa-light fa-arrow-right"></i></button>
       </div>
       <div class="et-tools-contact">
          @if ($toolPhone)
             <a href="tel:{{ $toolPhoneLink }}">
                <i class="fa-light fa-phone-volume"></i>
-               <span><small>To More Inquiry</small><strong>{{ $toolPhone }}</strong></span>
+               <span><small data-i18n="tools.inquiry">To More Inquiry</small><strong>{{ $toolPhone }}</strong></span>
             </a>
          @endif
          <a href="mailto:{{ $toolEmail }}">
             <i class="fa-light fa-paper-plane"></i>
-            <span><small>Email:</small><strong>{{ $toolEmail }}</strong></span>
+            <span><small data-i18n="tools.email">Email:</small><strong>{{ $toolEmail }}</strong></span>
          </a>
       </div>
    </div>

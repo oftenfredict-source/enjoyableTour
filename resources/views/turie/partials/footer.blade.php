@@ -120,39 +120,39 @@
             <a href="{{ url('/') }}">
                <img src="{{ asset('enjoyable-tour-logo.png') }}" alt="Enjoyable Tour">
             </a>
-            <p>Local guides for Kilimanjaro treks, northern safaris, day trips, and Zanzibar. Planned from our office in Moshi.</p>
+            <p data-i18n="footer.about">Local guides for Kilimanjaro treks, northern safaris, day trips, and Zanzibar. Planned from our office in Moshi.</p>
          </div>
          <div>
-            <h3>Company</h3>
+            <h3 data-i18n="footer.company">Company</h3>
             <ul>
-               <li><a href="{{ url('/') }}">Home</a></li>
-               <li><a href="{{ url('/about') }}">About us</a></li>
-               <li><a href="{{ url('/tours') }}">Tours</a></li>
-               <li><a href="{{ route('plan.index') }}">Plan your trip</a></li>
-               <li><a href="{{ url('/faq') }}">FAQ</a></li>
-               <li><a href="{{ url('/contact') }}">Contact</a></li>
+               <li><a href="{{ url('/') }}" data-i18n="footer.home">Home</a></li>
+               <li><a href="{{ url('/about') }}" data-i18n="footer.aboutLink">About us</a></li>
+               <li><a href="{{ url('/tours') }}" data-i18n="footer.tours">Tours</a></li>
+               <li><a href="{{ route('plan.index') }}" data-i18n="footer.plan">Plan your trip</a></li>
+               <li><a href="{{ url('/faq') }}" data-i18n="footer.faq">FAQ</a></li>
+               <li><a href="{{ url('/contact') }}" data-i18n="footer.contact">Contact</a></li>
             </ul>
          </div>
          <div>
-            <h3>Experiences</h3>
+            <h3 data-i18n="footer.experiences">Experiences</h3>
             <ul>
-               <li><a href="{{ url('/tours/trekking') }}">Trekking</a></li>
-               <li><a href="{{ url('/tours/safaris') }}">Safaris</a></li>
-               <li><a href="{{ url('/tours/day-trips') }}">Day trips</a></li>
-               <li><a href="{{ url('/tours/zanzibar') }}">Zanzibar</a></li>
+               <li><a href="{{ url('/tours/trekking') }}" data-i18n="nav.trekking">Trekking</a></li>
+               <li><a href="{{ url('/tours/safaris') }}" data-i18n="nav.safaris">Safaris</a></li>
+               <li><a href="{{ url('/tours/day-trips') }}" data-i18n="footer.day">Day trips</a></li>
+               <li><a href="{{ url('/tours/zanzibar') }}" data-i18n="nav.zanzibar">Zanzibar</a></li>
             </ul>
          </div>
          <div class="et-footer-contact">
-            <h3>Visit us</h3>
+            <h3 data-i18n="footer.visit">Visit us</h3>
             <p>Moshi, Kilimanjaro, Tanzania</p>
             <p><a href="tel:+255613963895">+255 613 963 895</a></p>
             <p><a href="mailto:{{ config('app.contact_email') }}">{{ config('app.contact_email') }}</a></p>
-            <p>Daily 08:00 – 20:00 EAT</p>
-            <a class="et-footer-whatsapp" href="https://wa.me/255613963895" target="_blank" rel="noopener">WhatsApp us</a>
+            <p data-i18n="footer.hours">Daily 08:00 – 20:00 EAT</p>
+            <a class="et-footer-whatsapp" href="https://wa.me/255613963895" target="_blank" rel="noopener" data-i18n="footer.whatsapp">WhatsApp us</a>
          </div>
       </div>
       <div class="et-footer-bar">
-         <span>© {{ date('Y') }} Enjoyable Tour. All rights reserved.</span>
+         <span>© {{ date('Y') }} Enjoyable Tour. <span data-i18n="footer.rights">All rights reserved.</span></span>
          <a href="{{ url('/privacy-policy') }}">Privacy policy</a>
       </div>
    </div>

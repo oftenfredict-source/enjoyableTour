@@ -36,6 +36,7 @@
       .et-mig-photo .et-mig-ring { fill: none; stroke: #b77e01; stroke-width: 2; opacity: 0; }
       .et-mig-photo .et-mig-stop.is-on .et-mig-ring { opacity: 1; }
    </style>
+   @include('turie.partials.theme-boot')
 </head>
 <body>
    <div id="loading">
