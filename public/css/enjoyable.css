@@ -956,25 +956,20 @@
 .et-tools-contact small { display: block; font-size: 13px; color: #5c6b64; }
 .et-tools-contact strong { color: var(--et-brand-navy); font-size: 16px; }
 
-.back-to-top-wrapper { right: 22px; }
-.back-to-top-wrapper.back-to-top-btn-show { bottom: 98px; }
+.back-to-top-wrapper { right: 20px; }
+.back-to-top-wrapper.back-to-top-btn-show { bottom: 72px; }
 @media (max-width: 574.98px) {
-  .back-to-top-wrapper { right: 18px; bottom: 92px; }
-  .back-to-top-wrapper.back-to-top-btn-show { bottom: 92px; }
+  .back-to-top-wrapper { right: 16px; bottom: 68px; }
+  .back-to-top-wrapper.back-to-top-btn-show { bottom: 68px; }
 }
 
-.et-fab { position: fixed; right: 18px; bottom: 18px; z-index: 100; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
-.et-fab-menu { display: none; flex-direction: column; align-items: flex-end; gap: 10px; }
+.et-fab { position: fixed; right: 16px; bottom: 16px; z-index: 100; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.et-fab-menu { display: none; flex-direction: column; align-items: flex-end; gap: 8px; }
 .et-fab.is-open .et-fab-menu { display: flex; }
-.et-fab-item { display: inline-flex; align-items: center; gap: 10px; border: 0; background: transparent; padding: 0; color: #16324f; text-decoration: none; cursor: pointer; }
-.et-fab-item span { background: #fff; border-radius: 999px; padding: 8px 12px; font-weight: 700; font-size: 13px; line-height: 1.2; box-shadow: 0 8px 20px rgba(7, 21, 22, .16); }
-.et-fab-item i { width: 46px; height: 46px; border-radius: 50%; background: #fff; color: var(--et-brand-navy); display: inline-flex; align-items: center; justify-content: center; font-size: 18px; box-shadow: 0 8px 20px rgba(7, 21, 22, .16); flex: 0 0 46px; }
-.et-fab-wa i { background: #25d366; color: #fff; }
-.et-fab-toggle { width: 58px; height: 58px; border: 0; border-radius: 50%; background: var(--et-brand-gold); color: #fff; font-size: 22px; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 10px 24px rgba(183, 126, 1, .4); cursor: pointer; }
-.et-fab-lang { display: none; gap: 6px; background: #fff; border-radius: 999px; padding: 6px; box-shadow: 0 8px 20px rgba(7, 21, 22, .16); }
-.et-fab-lang.is-open { display: flex; }
-.et-fab-lang button { border: 0; background: transparent; border-radius: 999px; padding: 6px 12px; font-weight: 700; font-size: 13px; color: #16324f; cursor: pointer; }
-.et-fab-lang button.is-active { background: var(--et-brand-navy); color: #fff; }
+.et-fab-item { width: 34px; height: 34px; border: 0; border-radius: 50%; background: #fff; color: var(--et-brand-navy); display: inline-flex; align-items: center; justify-content: center; padding: 0; text-decoration: none; cursor: pointer; box-shadow: 0 6px 16px rgba(7, 21, 22, .16); }
+.et-fab-item i { font-size: 14px; line-height: 1; }
+.et-fab-wa { background: #25d366; color: #fff; }
+.et-fab-toggle { width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--et-brand-gold); color: #fff; font-size: 16px; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 8px 18px rgba(183, 126, 1, .35); cursor: pointer; }
 
 html[data-theme="dark"] { color-scheme: dark; --tp-common-white: #141b22; --tp-common-white-2: #1b242d; --tp-common-black: #f3f6f8; --tp-grey-1: #c5ced6; --tp-grey-2: #9aa6b2; --tp-grey-3: #1b242d; --tp-border-1: rgba(255, 255, 255, .1); --tp-common-petals: #1a2a22; }
 html[data-theme="dark"] body { background: #10161c; color: #e6edf2; }
@@ -1043,12 +1038,8 @@ html[data-theme="dark"] .et-kili-fit-grid select,
 html[data-theme="dark"] input,
 html[data-theme="dark"] select,
 html[data-theme="dark"] textarea { background: #10161c; color: #f4f7fa; border-color: rgba(255, 255, 255, .14); }
-html[data-theme="dark"] .et-fab-item span,
-html[data-theme="dark"] .et-fab-item i,
-html[data-theme="dark"] .et-fab-lang { background: #1c2630; color: #f4f7fa; }
-html[data-theme="dark"] .et-fab-lang button { color: #f4f7fa; }
-html[data-theme="dark"] .et-fab-lang button.is-active { background: var(--et-brand-gold); color: #fff; }
-html[data-theme="dark"] .et-fab-wa i { background: #25d366; color: #fff; }
+html[data-theme="dark"] .et-fab-item { background: #1c2630; color: #f4f7fa; }
+html[data-theme="dark"] .et-fab-wa { background: #25d366; color: #fff; }
 html[data-theme="dark"] .et-plan-links .tp-btn-sm { background: #1c2630; color: #f4f7fa; border-color: rgba(255, 255, 255, .12); }
 html[data-theme="dark"] .et-month-key li,
 html[data-theme="dark"] .et-month strong { color: #f4f7fa; }
