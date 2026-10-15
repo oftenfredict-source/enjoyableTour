@@ -16,7 +16,7 @@
       <button type="button" class="et-tools-close" aria-label="Close trip tools"><i class="fa-light fa-xmark"></i></button>
    </div>
    <div class="et-tools-body">
-      <h2>Tour Type</h2>
+      <h2>Tour Tools</h2>
       <div class="et-tools-grid">
          @foreach ($toolCards as $tool)
             <a href="{{ $tool['url'] }}">
@@ -93,22 +93,68 @@
       }
    });
 
+   var destTimer = null;
+
    function scrollDestinations(direction) {
       if (!row) {
          return;
       }
       var card = row.querySelector('.et-tools-dest');
       var amount = card ? card.getBoundingClientRect().width + 12 : 180;
-      row.scrollBy({ left: direction * amount, behavior: 'smooth' });
+      var max = row.scrollWidth - row.clientWidth;
+      var nextLeft = row.scrollLeft + (direction * amount);
+      if (nextLeft >= max - 4) {
+         nextLeft = 0;
+      } else if (nextLeft < 0) {
+         nextLeft = max;
+      }
+      row.scrollTo({ left: nextLeft, behavior: 'smooth' });
+   }
+
+   function stopDestinations() {
+      if (destTimer) {
+         clearInterval(destTimer);
+         destTimer = null;
+      }
+   }
+
+   function startDestinations() {
+      stopDestinations();
+      if (!row || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+         return;
+      }
+      destTimer = setInterval(function () {
+         scrollDestinations(1);
+      }, 2600);
    }
 
    var previous = panel.querySelector('.et-tools-prev');
    var next = panel.querySelector('.et-tools-next');
    if (previous) {
-      previous.addEventListener('click', function () { scrollDestinations(-1); });
+      previous.addEventListener('click', function () {
+         scrollDestinations(-1);
+         startDestinations();
+      });
    }
    if (next) {
-      next.addEventListener('click', function () { scrollDestinations(1); });
+      next.addEventListener('click', function () {
+         scrollDestinations(1);
+         startDestinations();
+      });
    }
+   if (row) {
+      row.addEventListener('touchstart', stopDestinations, { passive: true });
+      row.addEventListener('touchend', startDestinations);
+   }
+
+   var openPanel = setOpen;
+   setOpen = function (open) {
+      openPanel(open);
+      if (open) {
+         startDestinations();
+      } else {
+         stopDestinations();
+      }
+   };
 })();
 </script>

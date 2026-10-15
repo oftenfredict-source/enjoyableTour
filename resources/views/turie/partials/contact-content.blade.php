@@ -264,7 +264,7 @@
                         </svg>
                      </span>
                      <span>Email</span>
-                     <a href="mailto:info@enjoyabletour.co.tz">info@enjoyabletour.co.tz</a>
+                     <a href="mailto:{{ config('app.contact_email') }}">{{ config('app.contact_email') }}</a>
                      <p>We reply within 24 hours</p>
                   </div>
                </div>

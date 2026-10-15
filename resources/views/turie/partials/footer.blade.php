@@ -146,7 +146,7 @@
             <h3>Visit us</h3>
             <p>Moshi, Kilimanjaro, Tanzania</p>
             <p><a href="tel:+255613963895">+255 613 963 895</a></p>
-            <p><a href="mailto:info@enjoyabletour.co.tz">info@enjoyabletour.co.tz</a></p>
+            <p><a href="mailto:{{ config('app.contact_email') }}">{{ config('app.contact_email') }}</a></p>
             <p>Daily 08:00 – 20:00 EAT</p>
             <a class="et-footer-whatsapp" href="https://wa.me/255613963895" target="_blank" rel="noopener">WhatsApp us</a>
          </div>
