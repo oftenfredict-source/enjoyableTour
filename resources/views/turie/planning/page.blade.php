@@ -16,7 +16,26 @@
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/animate.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/spacing.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/main.css') }}">
-   <link rel="stylesheet" href="{{ asset('css/enjoyable.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/enjoyable.css') }}?v={{ filemtime(public_path('css/enjoyable.css')) }}">
+   <style>
+      .et-kili-map { position: relative; border-radius: 14px; overflow: hidden; }
+      .et-kili-map > img { width: 100%; display: block; }
+      .et-kili-map svg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; }
+      .et-kili-map .et-route-halo, .et-kili-map .et-route-line { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .et-kili-map .et-route-halo { stroke: rgba(255, 255, 255, .92); stroke-width: 8; }
+      .et-kili-map .et-route-line { stroke: #b77e01; stroke-width: 4; }
+      .et-kili-map .et-route-far { stroke-dasharray: 9 8; }
+      .et-kili-map circle { fill: #00468a; stroke: #fff; stroke-width: 2; }
+      .et-kili-map text { font-size: 16px; font-weight: 700; fill: #102033; stroke: #fff; stroke-width: 5px; paint-order: stroke; }
+      .et-mig-herd { position: absolute; z-index: 1; width: 36%; opacity: 0; pointer-events: none; }
+      .et-mig-herd.is-on { opacity: 1; }
+      .et-mig-photo .et-mig-stop text { opacity: 0; }
+      .et-mig-photo .et-mig-stop.is-on text { opacity: 1; }
+      .et-mig-photo .et-mig-dot { fill: #fff; }
+      .et-mig-photo .et-mig-stop.is-on .et-mig-dot { fill: #b77e01; }
+      .et-mig-photo .et-mig-ring { fill: none; stroke: #b77e01; stroke-width: 2; opacity: 0; }
+      .et-mig-photo .et-mig-stop.is-on .et-mig-ring { opacity: 1; }
+   </style>
 </head>
 <body>
    <div id="loading">

@@ -40,8 +40,8 @@
                </div>
             @endforeach
             <svg viewBox="0 0 1000 750" preserveAspectRatio="none" role="img" aria-label="The yearly wildebeest migration drawn on the Serengeti">
-               <polyline class="et-route-halo" points="{{ implode(' ', $track) }}"></polyline>
-               <polyline class="et-route-line et-route-far" points="{{ implode(' ', $track) }}"></polyline>
+               <polyline class="et-route-halo" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" points="{{ implode(' ', $track) }}"></polyline>
+               <polyline class="et-route-line et-route-far" fill="none" stroke="#b77e01" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 8" points="{{ implode(' ', $track) }}"></polyline>
                @foreach ($guide['months'] as $number => $month)
                   @php
                      $right = $month['x'] > 780;
