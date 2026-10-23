@@ -27,6 +27,11 @@
       <span class="sidebar-label flex-1">Dashboard</span>
     </a>
 
+    <a href="{{ route('admin.analytics.index') }}" class="nav-item" data-page="analytics">
+      <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span class="sidebar-label flex-1">Analytics</span>
+    </a>
+
     <div class="sidebar-section-label">WEBSITE</div>
 
     <a href="{{ url('/') }}" target="_blank" class="nav-item" data-page="website">

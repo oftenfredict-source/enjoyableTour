@@ -44,7 +44,7 @@
 
         <div>
           <label class="form-label" for="login-email">Email Address</label>
-          <input id="login-email" name="email" type="email" class="form-input @error('email') border-red-500 @enderror" placeholder="admin@enjoyabletour.com" value="{{ old('email', 'admin@enjoyabletour.com') }}" required autofocus>
+          <input id="login-email" name="email" type="email" class="form-input @error('email') border-red-500 @enderror" placeholder="Enter your email" value="{{ old('email') }}" required autofocus>
         </div>
 
         <div>
@@ -69,11 +69,6 @@
           Sign In
         </button>
       </form>
-    </div>
-
-    <div class="auth-demo-box animate-[slideUp_0.8s_cubic-bezier(0.4,0,0.2,1)]">
-      <div class="auth-demo-box-title">Admin login</div>
-      <div class="auth-demo-box-text">Email: <strong>admin@enjoyabletour.com</strong> · Password: <strong>password</strong></div>
     </div>
   </div>
 
