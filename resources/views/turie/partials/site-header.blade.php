@@ -4,8 +4,8 @@
    $headerEmail = config('app.contact_email');
    $headerSocials = array_filter([
       'facebook-f' => config('app.social.facebook'),
-      'twitter' => config('app.social.x'),
       'instagram' => config('app.social.instagram'),
+      'tiktok' => config('app.social.tiktok'),
       'whatsapp' => $headerPhoneLink ? 'https://wa.me/'.ltrim($headerPhoneLink, '+') : null,
    ]);
 @endphp

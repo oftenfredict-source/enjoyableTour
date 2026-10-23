@@ -20,9 +20,9 @@ return [
     'contact_email' => env('CONTACT_EMAIL', 'info@enjoyabletour.co.tz'),
 
     'social' => [
-        'facebook' => env('SOCIAL_FACEBOOK', 'https://www.facebook.com/'),
-        'x' => env('SOCIAL_X', 'https://x.com/'),
-        'instagram' => env('SOCIAL_INSTAGRAM', 'https://www.instagram.com/'),
+        'facebook' => env('SOCIAL_FACEBOOK', 'https://www.facebook.com/profile.php?id=61595688929419'),
+        'instagram' => env('SOCIAL_INSTAGRAM', 'https://www.instagram.com/enjoyable.tour'),
+        'tiktok' => env('SOCIAL_TIKTOK', 'https://www.tiktok.com/@enjoyable_tour'),
     ],
 
     /*
