@@ -60,8 +60,8 @@
         </div>
 
         <div class="flex items-center gap-2">
-          <input type="checkbox" id="remember-me" name="remember" value="1" {{ old('remember') ? 'checked' : 'checked' }} class="w-4 h-4 accent-[#22B573] cursor-pointer">
-          <label for="remember-me" class="text-[13px] text-[var(--text)] cursor-pointer">Remember me for 30 days</label>
+          <input type="checkbox" id="remember-me" name="remember" value="1" {{ old('remember') ? 'checked' : '' }} class="w-4 h-4 accent-[#22B573] cursor-pointer">
+          <label for="remember-me" class="text-[13px] text-[var(--text)] cursor-pointer">Keep me signed in</label>
         </div>
 
         <button type="submit" class="btn btn-primary btn-lg w-full justify-center mt-1">

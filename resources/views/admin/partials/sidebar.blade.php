@@ -59,10 +59,17 @@
   <div id="sidebar-user" class="p-3 border-t" style="border-color:var(--border);flex-shrink:0;">
     <div class="flex items-center gap-3 p-2 rounded-xl">
       <div class="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-white font-semibold text-sm" style="background:var(--primary);">{{ $initials }}</div>
-      <div class="sidebar-label min-w-0">
+      <div class="sidebar-label min-w-0 flex-1">
         <div style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ $user->name }}</div>
         <div style="font-size:11px;color:var(--muted);">Administrator</div>
       </div>
     </div>
+    <form method="POST" action="{{ route('admin.logout') }}" class="mt-2">
+      @csrf
+      <button type="submit" class="nav-item w-full" style="color:#DC2626;border:none;background:transparent;cursor:pointer;text-align:left;">
+        <svg class="flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        <span class="sidebar-label flex-1">Sign Out</span>
+      </button>
+    </form>
   </div>
 </aside>
