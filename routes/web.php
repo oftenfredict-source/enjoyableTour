@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AnalyticsController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\InquiryController;
+use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\TourController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
@@ -32,6 +33,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::put('/inquiries/{inquiry}', [InquiryController::class, 'update'])->name('inquiries.update');
         Route::delete('/inquiries/{inquiry}', [InquiryController::class, 'destroy'])->name('inquiries.destroy');
         Route::get('/analytics', [AnalyticsController::class, 'index'])->name('analytics.index');
+        Route::get('/media', [MediaController::class, 'index'])->name('media.index');
+        Route::post('/media', [MediaController::class, 'store'])->name('media.store');
+        Route::put('/media/{medium}', [MediaController::class, 'update'])->name('media.update');
+        Route::delete('/media/{medium}', [MediaController::class, 'destroy'])->name('media.destroy');
     });
 });
 
