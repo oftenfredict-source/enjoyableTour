@@ -56,6 +56,9 @@
                   </a>
                @endif
                <div class="tp-header-toogle-wrapper d-xl-none ml-15">
+                  <button type="button" class="et-tools-open" aria-label="Open trip tools">
+                     <span></span><span></span><span></span><span></span>
+                  </button>
                   <button class="tp-header-toogle" aria-label="Open menu">
                      <span></span>
                      <span></span>

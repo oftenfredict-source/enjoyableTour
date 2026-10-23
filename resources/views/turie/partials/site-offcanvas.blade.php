@@ -34,4 +34,6 @@
    </div>
 </div>
 <div class="tp-offcanvas-overlay"></div>
+@include('turie.partials.tools-panel')
+@include('turie.partials.float-actions')
 <!-- tp-offcanvas end -->

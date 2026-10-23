@@ -17,7 +17,7 @@ return [
 
     'contact_phone' => env('CONTACT_PHONE', '+255 613 963 895'),
 
-    'contact_email' => env('CONTACT_EMAIL', 'info@enjoyabletour.co.tz'),
+    'contact_email' => env('CONTACT_EMAIL', 'info@enjoyabletour.com'),
 
     'social' => [
         'facebook' => env('SOCIAL_FACEBOOK', 'https://www.facebook.com/profile.php?id=61595688929419'),

@@ -20,7 +20,8 @@
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/range-slider.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/spacing.css') }}">
    <link rel="stylesheet" href="{{ asset('turiehtml-10/turie/assets/css/main.css') }}">
-   <link rel="stylesheet" href="{{ asset('css/enjoyable.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/enjoyable.live.css') }}">
+   @include('turie.partials.theme-boot')
 </head>
 
 <body>

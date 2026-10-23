@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TourController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PlanningController;
 use App\Http\Controllers\TourPageController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,6 +35,21 @@ Route::get('/tours/{category}', [TourPageController::class, 'grid'])
     ->name('tours.category');
 Route::get('/tour/{slug}', [TourPageController::class, 'show'])->name('tour.show');
 Route::get('/find-your-tour', [TourPageController::class, 'finder'])->name('tours.finder');
+Route::get('/css/enjoyable.live.css', [PlanningController::class, 'stylesheet']);
+Route::get('/images/{folder}/{file}', [PlanningController::class, 'publicImage'])
+    ->where('folder', 'planning|about')
+    ->where('file', '[A-Za-z0-9._-]+');
+Route::get('/plan', [PlanningController::class, 'index'])->name('plan.index');
+Route::get('/plan/best-time', [PlanningController::class, 'bestTime'])->name('plan.best-time');
+Route::get('/plan/safari-budget', [PlanningController::class, 'budget'])->name('plan.budget');
+Route::get('/plan/build', [PlanningController::class, 'build'])->name('plan.build');
+Route::get('/plan/kilimanjaro', [PlanningController::class, 'kilimanjaro'])->name('plan.kilimanjaro');
+Route::get('/plan/migration', [PlanningController::class, 'migration'])->name('plan.migration');
+Route::get('/plan/packing', [PlanningController::class, 'packing'])->name('plan.packing');
+Route::get('/parks', [PlanningController::class, 'parks'])->name('parks.index');
+Route::get('/parks/{slug}', [PlanningController::class, 'park'])
+    ->whereIn('slug', array_keys(\App\Support\PlanningData::parks()))
+    ->name('parks.show');
 Route::permanentRedirect('/tour-grid-sidebar', '/find-your-tour');
 Route::permanentRedirect('/tour-details', '/tours');
 
