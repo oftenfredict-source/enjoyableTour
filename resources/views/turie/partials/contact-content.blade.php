@@ -311,7 +311,17 @@
                   <div class="et-contact-form-card">
                      <span class="tp-section-two-subtitle d-inline-block mb-10">Send a message</span>
                      <h2 class="tp-section-title fs-32 fw-600 mb-25">Request a free quote</h2>
-                     <form id="contact-form" action="#" method="POST">
+                     @if (session('success'))
+                        <div class="mb-20" style="background:#ecfdf5;border:1px solid #86efac;color:#166534;border-radius:12px;padding:14px 16px;font-size:15px;">
+                           {{ session('success') }}
+                        </div>
+                     @endif
+                     @if ($errors->any())
+                        <div class="mb-20" style="background:#fef2f2;border:1px solid #fecaca;color:#991b1b;border-radius:12px;padding:14px 16px;font-size:15px;">
+                           {{ $errors->first() }}
+                        </div>
+                     @endif
+                     <form id="contact-form" action="{{ route('contact.store') }}" method="POST">
                         @csrf
                         <div class="row">
                            <div class="col-md-6">

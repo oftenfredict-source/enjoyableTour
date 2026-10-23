@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\InquiryController;
 use App\Http\Controllers\Admin\TourController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlanningController;
 use App\Http\Controllers\TourPageController;
@@ -24,6 +26,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
         Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
         Route::resource('tours', TourController::class)->except(['show']);
+        Route::get('/inquiries', [InquiryController::class, 'index'])->name('inquiries.index');
+        Route::get('/inquiries/{inquiry}', [InquiryController::class, 'show'])->name('inquiries.show');
+        Route::put('/inquiries/{inquiry}', [InquiryController::class, 'update'])->name('inquiries.update');
+        Route::delete('/inquiries/{inquiry}', [InquiryController::class, 'destroy'])->name('inquiries.destroy');
     });
 });
 
@@ -77,3 +83,5 @@ $turiePages = [
 foreach ($turiePages as $uri => $view) {
     Route::view($uri, 'turie.' . $view)->name('turie.' . $view);
 }
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
